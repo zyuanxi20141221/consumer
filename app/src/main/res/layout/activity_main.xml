@@ -25,7 +25,7 @@
             android:text="深圳"
             android:layout_gravity="bottom"
             android:layout_marginLeft="5dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="8dp"
             android:textColor="@color/white"/>
 
     </LinearLayout>

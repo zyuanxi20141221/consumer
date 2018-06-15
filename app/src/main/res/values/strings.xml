@@ -4,4 +4,16 @@
     <string name="category">分类</string>
     <string name="order">订单</string>
     <string name="profile">我的</string>
+    <string name="red_package">新人红包</string>
+    <string name="present_card">礼品卡</string>
+    <string name="monthly_discount">每月特惠</string>
+    <string name="recommend_present">推荐有礼</string>
+    <string name="door_install">上门安装</string>
+    <string name="door_install_tip">省心金牌安装师</string>
+    <string name="more">更多</string>
+    <string name="bathroom">五金卫浴</string>
+    <string name="lamp">电路灯具</string>
+    <string name="air_install">空调安装</string>
+    <string name="hot_water">热水器</string>
+
 </resources>

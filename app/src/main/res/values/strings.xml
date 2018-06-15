@@ -15,5 +15,7 @@
     <string name="lamp">电路灯具</string>
     <string name="air_install">空调安装</string>
     <string name="hot_water">热水器</string>
+    <string name="appliance_repair">家电维修</string>
+    <string name="full_service_tip">尽心竭力为您服务</string>
 
 </resources>

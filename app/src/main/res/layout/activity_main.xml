@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="55dp"
         android:background="@color/orange"
         android:orientation="horizontal">
 
@@ -14,8 +14,8 @@
             android:id="@+id/top_city_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:layout_marginLeft="18dp"
+            android:layout_centerVertical="true"
             android:src="@drawable/top_icon_city"/>
 
         <TextView
@@ -45,7 +45,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/top_title"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="5dp"
             android:text="Minor Overhaul"
             android:textColor="@color/white"
             android:textSize="10sp"/>

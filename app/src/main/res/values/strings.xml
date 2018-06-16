@@ -17,5 +17,9 @@
     <string name="hot_water">热水器</string>
     <string name="appliance_repair">家电维修</string>
     <string name="full_service_tip">尽心竭力为您服务</string>
+    <string name="select_city">选择服务城市</string>
+    <string name="position_city">定位城市</string>
+    <string name="history_city">历史城市</string>
+    <string name="open_city">开通城市</string>
 
 </resources>

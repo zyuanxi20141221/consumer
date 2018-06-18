@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/orange"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/icon_return"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/select_city"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp">
+
+        <ImageView
+            android:id="@+id/icon_positon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/icon_position"/>
+
+        <TextView
+            android:id="@+id/txt_position_city_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/icon_positon"
+            android:text="@string/position_city"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/txt_positon_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txt_position_city_label"
+            android:layout_below="@+id/txt_position_city_label"
+            android:layout_marginTop="20dp"
+            android:text="深圳"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/view_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="28dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_location"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="重新定位"
+                android:textColor="@color/orange"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/icon_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/icon_history"/>
+
+        <TextView
+            android:id="@+id/text_history_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/icon_history"
+            android:text="@string/history_city"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <com.xzxx.decorate.o2o.view.FlowLayout
+        android:id="@+id/flow_layout_history_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_history_city"
+        android:layout_below="@+id/text_history_city"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp">
+
+    </com.xzxx.decorate.o2o.view.FlowLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/icon_open_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/icon_city"/>
+
+        <TextView
+            android:id="@+id/text_open_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/icon_open_city"
+            android:text="@string/open_city"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+    <com.xzxx.decorate.o2o.view.FlowLayout
+        android:id="@+id/flow_layout_open_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_history_city"
+        android:layout_below="@+id/text_history_city"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="20dp"
+        app:lineSpacing="15dp">
+
+    </com.xzxx.decorate.o2o.view.FlowLayout>
+
+</LinearLayout>

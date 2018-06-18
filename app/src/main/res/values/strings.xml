@@ -21,5 +21,18 @@
     <string name="position_city">定位城市</string>
     <string name="history_city">历史城市</string>
     <string name="open_city">开通城市</string>
+    <string name="personal_service_address">我的服务地址</string>
+    <string name="add_address">新增地址</string>
+    
+    <string name="add_one_address">添加地址</string>
+    <string name="save_address">保存</string>
+    <string name="contact">联系人</string>
+    <string name="receive_address">收货地址</string>
+
+    <string name="personal_address">我的地址</string>
+
+    <string name="edit_address">编辑</string>
+
+    <string name="default_address">默认地址</string>
 
 </resources>

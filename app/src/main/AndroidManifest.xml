@@ -15,19 +15,35 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".MainActivity">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
             <!--</intent-filter>-->
         </activity>
 
-        <activity android:name="com.xzxx.decorate.o2o.ui.SelectCity">
+        <activity android:name="com.xzxx.decorate.o2o.ui.Activity_SelectCity">
+
+        </activity>
+
+        <activity android:name="com.xzxx.decorate.o2o.ui.Activity_SelectCity_Address">
+
+        </activity>
+
+        <activity android:name="com.xzxx.decorate.o2o.ui.Activity_Add_Address">
+
+        </activity>
+
+        <activity android:name="com.xzxx.decorate.o2o.ui.Activity_Personal_Address">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
         </activity>
+
+
     </application>
 
 </manifest>

@@ -9,9 +9,6 @@ import com.xzxx.decorate.o2o.consumer.R;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by taofangxin on 16/4/16.
- */
 public class FlowLayout extends ViewGroup {
 
     private Context mContext;

@@ -13,6 +13,6 @@ public class OrderFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment3, null);
+        return inflater.inflate(R.layout.fragment_order, null);
     }
 }

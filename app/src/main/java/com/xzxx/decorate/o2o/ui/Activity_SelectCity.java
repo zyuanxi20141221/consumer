@@ -16,7 +16,7 @@ import com.xzxx.decorate.o2o.view.FlowLayout;
  * 选择服务城市列表界面
  * Created by zf on 2018/6/16.
  */
-public class SelectCity extends AppCompatActivity {
+public class Activity_SelectCity extends AppCompatActivity {
 
     private String[] historycitys = new String[]{"深圳", "泉州"};
 
@@ -29,7 +29,7 @@ public class SelectCity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_city);
+        setContentView(R.layout.layout_select_city);
         mFlowLayoutHistoryCity = (FlowLayout) findViewById(R.id.flow_layout_history_city);
         mFlowLayoutOpenCity = (FlowLayout) findViewById(R.id.flow_layout_open_city);
         initHistoryCitys();
@@ -41,7 +41,7 @@ public class SelectCity extends AppCompatActivity {
         for (int i = 0; i < historycitys.length; i++) {
             int ranHeight = dip2px(this, 30);
             ViewGroup.MarginLayoutParams lp = new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ranHeight);
-            lp.setMargins(dip2px(this, 10), 0, dip2px(this, 10), 0);
+            lp.setMargins(dip2px(this, 6), 0, dip2px(this, 6), 0);
             TextView tv = new TextView(this);
             tv.setPadding(dip2px(this, 15), 0, dip2px(this, 15), 0);
             tv.setTextColor(Color.parseColor("#000000"));
@@ -57,7 +57,7 @@ public class SelectCity extends AppCompatActivity {
         for (int i = 0; i < opencitys.length; i++) {
             int ranHeight = dip2px(this, 30);
             ViewGroup.MarginLayoutParams lp = new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ranHeight);
-            lp.setMargins(dip2px(this, 10), 0, dip2px(this, 10), 0);
+            lp.setMargins(dip2px(this, 6), 0, dip2px(this, 6), 0);
             TextView tv = new TextView(this);
             tv.setPadding(dip2px(this, 15), 0, dip2px(this, 15), 0);
             tv.setTextColor(Color.parseColor("#000000"));

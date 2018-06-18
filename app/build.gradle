@@ -10,6 +10,16 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        config {
+            keyAlias 'goopai_alias.keystore'
+            keyPassword 'goopai201304'
+            storeFile file('D:/key/goopai_android.keystore')
+            storePassword 'goopai201304'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -27,4 +37,14 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     api 'com.youth.banner:banner:+'
     api "com.github.bumptech.glide:glide:3.7.0"
+
+    //3D地图so及jar
+    api 'com.amap.api:3dmap:latest.integration'
+
+    api 'com.amap.api:map2d:latest.integration'
+
+    //搜索功能
+    api 'com.amap.api:search:latest.integration'
+    //定位功能
+    api 'com.amap.api:location:latest.integration'
 }

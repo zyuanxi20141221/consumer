@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 我的地址页面
  * Created by zf on 2018/6/17.
  */
 public class Activity_Personal_Address extends AppCompatActivity {

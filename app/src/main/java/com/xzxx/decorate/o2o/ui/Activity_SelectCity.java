@@ -13,7 +13,7 @@ import com.xzxx.decorate.o2o.consumer.R;
 import com.xzxx.decorate.o2o.view.FlowLayout;
 
 /**
- * 选择服务城市列表界面
+ * 选择服务城市列表页面
  * Created by zf on 2018/6/16.
  */
 public class Activity_SelectCity extends AppCompatActivity {

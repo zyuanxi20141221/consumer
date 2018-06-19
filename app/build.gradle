@@ -49,4 +49,6 @@ dependencies {
     api 'com.amap.api:location:latest.integration'
 
     api 'com.githang:com-phillipcalvin-iconbutton:2.0.2'
+
+    api 'com.makeramen:roundedimageview:2.2.1'
 }

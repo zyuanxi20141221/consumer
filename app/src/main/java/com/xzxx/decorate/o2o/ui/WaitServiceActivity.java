@@ -11,6 +11,11 @@ import com.amap.api.maps.MapView;
 import com.amap.api.maps.model.MyLocationStyle;
 import com.xzxx.decorate.o2o.consumer.R;
 
+
+/**
+ * 等待服务页面
+ * Created by zf on 2018/6/19.
+ */
 public class WaitServiceActivity extends AppCompatActivity implements LocationSource, AMapLocationListener {
 
     private MapView mMapView;

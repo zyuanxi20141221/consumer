@@ -9,7 +9,7 @@ import com.xzxx.decorate.o2o.consumer.R;
  * 选择服务城市并显示定位地点页面
  * Created by zf on 2018/6/17.
  */
-public class Activity_SelectCity_Address extends AppCompatActivity {
+public class SelectCityAddressActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

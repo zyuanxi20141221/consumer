@@ -52,23 +52,28 @@
             <!--</intent-filter>-->
         </activity>
 
-        <activity android:name="com.xzxx.decorate.o2o.ui.Activity_SelectCity">
+        <activity android:name="com.xzxx.decorate.o2o.ui.SelectCityActivity">
 
         </activity>
 
-        <activity android:name="com.xzxx.decorate.o2o.ui.Activity_SelectCity_Address">
+        <activity android:name="com.xzxx.decorate.o2o.ui.SelectCityAddressActivity">
 
         </activity>
 
-        <activity android:name="com.xzxx.decorate.o2o.ui.Activity_Add_Address">
+        <activity android:name="com.xzxx.decorate.o2o.ui.AddAddressActivity">
 
         </activity>
 
-        <activity android:name="com.xzxx.decorate.o2o.ui.Activity_Personal_Address">
+        <activity android:name="com.xzxx.decorate.o2o.ui.PersonalAddressActivity">
 
         </activity>
 
-        <activity android:name="com.xzxx.decorate.o2o.ui.Activity_Release_Order">
+        <activity android:name="com.xzxx.decorate.o2o.ui.ReleaseOrderActivity">
+
+
+        </activity>
+
+        <activity android:name="com.xzxx.decorate.o2o.ui.WaitServiceActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

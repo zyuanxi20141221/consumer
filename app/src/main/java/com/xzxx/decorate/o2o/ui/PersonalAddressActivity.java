@@ -14,7 +14,7 @@ import java.util.List;
  * 我的地址页面
  * Created by zf on 2018/6/17.
  */
-public class Activity_Personal_Address extends AppCompatActivity {
+public class PersonalAddressActivity extends AppCompatActivity {
 
     private ListView listView;
     private PersonalAddressAdapter addressAdapter;

@@ -9,7 +9,7 @@ import com.xzxx.decorate.o2o.consumer.R;
  * 添加地址页面
  * Created by zf on 2018/6/17.
  */
-public class Activity_Add_Address extends AppCompatActivity {
+public class AddAddressActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

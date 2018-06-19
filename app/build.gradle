@@ -47,4 +47,6 @@ dependencies {
     api 'com.amap.api:search:latest.integration'
     //定位功能
     api 'com.amap.api:location:latest.integration'
+
+    api 'com.githang:com-phillipcalvin-iconbutton:2.0.2'
 }

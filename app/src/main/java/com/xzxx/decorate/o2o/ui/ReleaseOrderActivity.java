@@ -27,7 +27,7 @@ import java.util.Date;
  * 发布订单页面
  * Created by zf on 2018/6/18.
  */
-public class Activity_Release_Order extends AppCompatActivity implements LocationSource, AMapLocationListener {
+public class ReleaseOrderActivity extends AppCompatActivity implements LocationSource, AMapLocationListener {
 
     private MapView mMapView;
     private AMap aMap;
@@ -45,7 +45,7 @@ public class Activity_Release_Order extends AppCompatActivity implements Locatio
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_release_order);
-        mMapView = findViewById(R.id.map);
+        mMapView = findViewById(R.id.id_map_release_order);
         mMapView.onCreate(savedInstanceState);
         if (aMap == null) {
             aMap = mMapView.getMap();

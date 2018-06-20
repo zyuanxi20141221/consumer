@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements TabHost.OnTabChan
 
     private FragmentTabHost fragmentTabHost;
 
-    private int texts[] = {R.string.home, R.string.category, R.string.order, R.string.profile};
+    private int texts[] = {R.string.home, R.string.classify, R.string.order, R.string.profile};
     private int imageButton[] = {R.drawable.selector_home, R.drawable.selector_classify, R.drawable.selector_order, R.drawable.selector_personal};
     private Class fragmentArray[] = {HomeFragment.class, ClassifyFragment.class, OrderFragment.class, PersonalFragment.class};
 

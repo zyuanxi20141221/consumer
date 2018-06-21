@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.xzxx.decorate.o2o.consumer">
+    package="com.xzxx.decorate.o2o.consumer">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <!--允许程序打开网络套接字-->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,7 +16,7 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!--允许程序访问CellID或WiFi热点来获取粗略的位置-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    
+
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE." />
 
     <!--用于进行网络定位-->
@@ -25,7 +25,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <!--用于申请调用A-GPS模块-->
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 
 
     <application
@@ -37,21 +37,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <meta-data android:name="com.amap.api.v2.apikey"
-                   android:value="59640a9310f3766d3c4d3bc8273d4ab8" />
-
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="59640a9310f3766d3c4d3bc8273d4ab8" />
 
         <service android:name="com.amap.api.location.APSService"></service>
 
         <activity android:name=".MainActivity">
+
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
+
         </activity>
 
         <activity android:name="com.xzxx.decorate.o2o.ui.SelectCityActivity">
+
 
         </activity>
 

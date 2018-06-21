@@ -1,6 +1,5 @@
 package com.xzxx.decorate.o2o.ui;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.xzxx.decorate.o2o.consumer.R;
 import com.xzxx.decorate.o2o.view.FlowLayout;
+
+import util.BasicUtils;
 
 /**
  * 选择服务城市列表页面
@@ -39,11 +40,11 @@ public class SelectCityActivity extends AppCompatActivity {
 
     public void initHistoryCitys() {
         for (int i = 0; i < historycitys.length; i++) {
-            int ranHeight = dip2px(this, 30);
+            int ranHeight = BasicUtils.dip2px(this, 30);
             ViewGroup.MarginLayoutParams lp = new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ranHeight);
-            lp.setMargins(dip2px(this, 6), 0, dip2px(this, 6), 0);
+            lp.setMargins(BasicUtils.dip2px(this, 6), 0, BasicUtils.dip2px(this, 6), 0);
             TextView tv = new TextView(this);
-            tv.setPadding(dip2px(this, 15), 0, dip2px(this, 15), 0);
+            tv.setPadding(BasicUtils.dip2px(this, 15), 0, BasicUtils.dip2px(this, 15), 0);
             tv.setTextColor(Color.parseColor("#000000"));
             tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
             tv.setText(historycitys[i]);
@@ -55,11 +56,11 @@ public class SelectCityActivity extends AppCompatActivity {
 
     public void initOpenCitys() {
         for (int i = 0; i < opencitys.length; i++) {
-            int ranHeight = dip2px(this, 30);
+            int ranHeight = BasicUtils.dip2px(this, 30);
             ViewGroup.MarginLayoutParams lp = new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ranHeight);
-            lp.setMargins(dip2px(this, 6), 0, dip2px(this, 6), 0);
+            lp.setMargins(BasicUtils.dip2px(this, 6), 0, BasicUtils.dip2px(this, 6), 0);
             TextView tv = new TextView(this);
-            tv.setPadding(dip2px(this, 15), 0, dip2px(this, 15), 0);
+            tv.setPadding(BasicUtils.dip2px(this, 15), 0, BasicUtils.dip2px(this, 15), 0);
             tv.setTextColor(Color.parseColor("#000000"));
             tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
             tv.setText(opencitys[i]);
@@ -67,11 +68,6 @@ public class SelectCityActivity extends AppCompatActivity {
             tv.setLines(1);
             mFlowLayoutOpenCity.addView(tv, lp);
         }
-    }
-
-    public static int dip2px(Context context, float dpValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (dpValue * scale + 0.5f);
     }
 
 

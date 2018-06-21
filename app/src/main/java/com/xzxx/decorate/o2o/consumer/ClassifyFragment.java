@@ -21,6 +21,8 @@ import com.xzxx.decorate.o2o.view.FlowLayout;
 import java.util.HashMap;
 import java.util.Map;
 
+import util.BasicUtils;
+
 public class ClassifyFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     private String[] data = new String[]{"热门服务", "上门安装", "家电维修", "开锁换锁", "管道疏通", "防水补漏"};
@@ -64,12 +66,11 @@ public class ClassifyFragment extends Fragment implements AdapterView.OnItemClic
 
     public void showFlowText(String[] data) {
         for (int i = 0; i < data.length; i++) {
-            int ranHeight = dip2px(getContext(), 30);
-            ViewGroup.MarginLayoutParams lp = new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ranHeight);
-            lp.setMargins(dip2px(getContext(), 2), 0, dip2px(getContext(), 2), 0);
+            int ranHeight = BasicUtils.dip2px(getContext(), 30);
+            ViewGroup.MarginLayoutParams lp = new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ranHeight);
+            lp.setMargins(BasicUtils.dip2px(getContext(), 2), 0, BasicUtils.dip2px(getContext(), 2), 0);
             TextView tv = new TextView(getContext());
-            tv.setPadding(dip2px(getContext(), 12), 0, dip2px(getContext(), 12), 0);
+            tv.setPadding(BasicUtils.dip2px(getContext(), 12), 0, BasicUtils.dip2px(getContext(), 12), 0);
             tv.setTextColor(Color.parseColor("#000000"));
             tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
             tv.setText(data[i]);
@@ -78,11 +79,6 @@ public class ClassifyFragment extends Fragment implements AdapterView.OnItemClic
             tv.setBackgroundResource(R.drawable.bg_flow_layout_tag);
             flowLayout.addView(tv, lp);
         }
-    }
-
-    public static int dip2px(Context context, float dpValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int) (dpValue * scale + 0.5f);
     }
 
     private class MyAdapter extends ArrayAdapter<String> {

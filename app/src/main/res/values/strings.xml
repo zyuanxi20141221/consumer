@@ -5,6 +5,7 @@
     <string name="classify">分类</string>
     <string name="order">订单</string>
     <string name="profile">我的</string>
+    <string name="owner_order">我的订单</string>
     <string name="red_package">新人红包</string>
     <string name="city_shenzhen">深圳</string>
     <string name="present_card">礼品卡</string>
@@ -56,5 +57,11 @@
     <string name="call_phone">拨打电话</string>
 
     <string name="master_info">师傅资料</string>
+
+    <string name="all_order">全部订单</string>
+
+    <string name="to_be_evaluate">待评价</string>
+
+    <string name="after_sale_service">售后服务</string>
 
 </resources>

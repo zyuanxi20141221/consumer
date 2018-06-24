@@ -19,7 +19,7 @@ public abstract class BaseFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return initView(inflater);
+        return initView(inflater, container , savedInstanceState);
     }
 
     @Override
@@ -30,5 +30,5 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract void loadData();
 
-    protected abstract View initView(LayoutInflater inflater);
+    protected abstract View initView(LayoutInflater inflater, ViewGroup container, Bundle bundle);
 }

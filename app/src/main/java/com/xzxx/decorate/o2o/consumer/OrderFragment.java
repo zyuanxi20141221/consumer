@@ -12,12 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.xzxx.decorate.o2o.fragment.BaseFragment;
 import com.xzxx.decorate.o2o.fragment.FragmentFactory;
-
 import java.lang.reflect.Field;
-
 import util.BasicUtils;
 
 public class OrderFragment extends Fragment {
@@ -36,6 +33,7 @@ public class OrderFragment extends Fragment {
         mViewPager = view.findViewById(R.id.tab_viewpager);
         reflex(mTabLayout);
         pageAdatper = new PageAdatper(getFragmentManager());
+        mViewPager.setOffscreenPageLimit(3);
         mViewPager.setAdapter(pageAdatper);
         mTabLayout.setupWithViewPager(mViewPager);
         return view;

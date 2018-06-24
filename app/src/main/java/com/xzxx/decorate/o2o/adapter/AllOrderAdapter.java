@@ -16,13 +16,12 @@ import java.util.List;
  */
 public class AllOrderAdapter extends BaseAdapter {
 
-    private Context mContext;
+    private Context mcontext;
     private List<Order> orders;
-    private LayoutInflater mInflater;
 
     public AllOrderAdapter(List<Order> list, Context context) {
         this.orders = list;
-        this.mInflater = LayoutInflater.from(context);
+        this.mcontext = context;
     }
 
     @Override
@@ -45,7 +44,7 @@ public class AllOrderAdapter extends BaseAdapter {
         ViewHolder viewHolder = null;
         if(convertView == null) {
              viewHolder = new ViewHolder();
-             convertView = mInflater.inflate(R.layout.item_listview_allorder, null);
+             convertView = LayoutInflater.from(mcontext).inflate(R.layout.item_listview_allorder, null);
              viewHolder.master_name_text = convertView.findViewById(R.id.id_master_name);
              viewHolder.master_photo_image = convertView.findViewById(R.id.id_master_photo);
              viewHolder.master_order_count_text = convertView.findViewById(R.id.id_master_order_count);

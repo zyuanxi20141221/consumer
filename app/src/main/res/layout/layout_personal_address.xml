@@ -31,7 +31,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:text="@string/edit_address"
+            android:text="@string/edit"
             android:textColor="@color/white"
             android:textSize="15sp"/>
 

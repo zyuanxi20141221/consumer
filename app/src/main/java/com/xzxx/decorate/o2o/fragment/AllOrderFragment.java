@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RatingBar;
-
 import com.xzxx.decorate.o2o.adapter.AllOrderAdapter;
 import com.xzxx.decorate.o2o.bean.Order;
 import com.xzxx.decorate.o2o.consumer.R;

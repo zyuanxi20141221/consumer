@@ -34,7 +34,7 @@
 
     <string name="personal_address">我的地址</string>
 
-    <string name="edit_address">编辑</string>
+    <string name="edit">编辑</string>
 
     <string name="default_address">默认地址</string>
 
@@ -75,5 +75,31 @@
     <string name="setting">设置</string>
 
     <string name="ticket">优惠券</string>
+
+    <string name="ordered">预约下单</string>
+
+    <string name="sex">性别</string>
+
+    <string name="birthday">生日</string>
+
+    <string name="phone_number">电话</string>
+
+    <string name="job">职业</string>
+
+    <string name="change_phone_number">更换手机号</string>
+
+    <string name="login_password">登陆密码</string>
+
+    <string name="modify">修改</string>
+
+    <string name="about_ower">关于我们</string>
+
+    <string name="contact_service">联系客服</string>
+
+    <string name="clean_cache">清理缓存</string>
+
+    <string name ="service_leader">服务指南</string>
+
+    <string name="loginout">退出登陆</string>
 
 </resources>

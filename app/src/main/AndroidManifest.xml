@@ -87,6 +87,11 @@
 
         <activity android:name="com.xzxx.decorate.o2o.ui.SettingActivity">
 
+
+        </activity>
+
+        <activity android:name="com.xzxx.decorate.o2o.ui.LoginActivity">
+
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN"/>

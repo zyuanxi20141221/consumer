@@ -117,10 +117,16 @@
 
     <string name="password">密码</string>
 
+    <string name="verification">验证码</string>
+
     <string name="forget_pwd">忘记密码？</string>
 
     <string name="new_user_rigester">新用户注册</string>
 
     <string name="verification_login">验证码登陆</string>
+
+    <string name="password_login">密码登陆</string>
+
+    <string name="send_verification">发送验证码</string>
 
 </resources>

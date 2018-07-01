@@ -47,7 +47,6 @@ public class HomeFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 .setOnBannerListener(this)
                 .start();
         banner.updateBannerStyle(BannerConfig.CIRCLE_INDICATOR);
-
         return view;
     }
 

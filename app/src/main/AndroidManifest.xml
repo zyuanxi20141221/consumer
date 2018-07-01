@@ -27,7 +27,6 @@
     <!--用于申请调用A-GPS模块-->
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
 
-
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -43,6 +42,7 @@
 
         <service android:name="com.amap.api.location.APSService"></service>
 
+        <!--主页面-->
         <activity android:name=".MainActivity">
 
             <!--<intent-filter>-->
@@ -55,43 +55,40 @@
 
         </activity>
 
+        <!--选择服务城市-->
         <activity android:name="com.xzxx.decorate.o2o.ui.SelectCityActivity">
-
-
         </activity>
 
+        <!--选择服务城市并显示定位地点-->
         <activity android:name="com.xzxx.decorate.o2o.ui.SelectCityAddressActivity">
-
         </activity>
 
+        <!--添加地址-->
         <activity android:name="com.xzxx.decorate.o2o.ui.AddAddressActivity">
-
         </activity>
 
+        <!--我的地址-->
         <activity android:name="com.xzxx.decorate.o2o.ui.PersonalAddressActivity">
-
         </activity>
 
+        <!--发布订单-->
         <activity android:name="com.xzxx.decorate.o2o.ui.ReleaseOrderActivity">
-
         </activity>
 
+        <!--等待服务-->
         <activity android:name="com.xzxx.decorate.o2o.ui.WaitServiceActivity">
-
         </activity>
 
-        <activity android:name="com.xzxx.decorate.o2o.ui.OrderActivity">
-
-
+        <!--个人资料-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.PersonalInfoActivity">
         </activity>
 
+        <!--设置-->
         <activity android:name="com.xzxx.decorate.o2o.ui.SettingActivity">
-
-
         </activity>
 
+        <!--登陆-->
         <activity android:name="com.xzxx.decorate.o2o.ui.LoginActivity">
-
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN"/>
@@ -99,7 +96,26 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
 
             </intent-filter>
+        </activity>
 
+        <!--新用户注册-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.RegisterActivity">
+        </activity>
+
+        <!--设置登陆密码-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.SettingLoginPasswodActivity">
+        </activity>
+
+        <!--忘记密码-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.ForgetPasswordActivity">
+        </activity>
+
+        <!--更换手机号-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.ChangeMobieActivity">
+        </activity>
+
+        <!--新号码验证-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.NewMobileActivity">
         </activity>
 
     </application>

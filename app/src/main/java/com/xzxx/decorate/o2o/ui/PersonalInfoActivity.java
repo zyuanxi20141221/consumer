@@ -7,14 +7,14 @@ import com.xzxx.decorate.o2o.consumer.R;
 
 /**
  * Created by zf on 2018/6/25.
- * 预约下单页面
+ * 个人资料页面
  */
-public class OrderActivity extends AppCompatActivity {
+public class PersonalInfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_order);
+        setContentView(R.layout.layout_personal_info);
 
     }
 

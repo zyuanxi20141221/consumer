@@ -17,6 +17,9 @@ import com.xzxx.decorate.o2o.fragment.FragmentFactory;
 import java.lang.reflect.Field;
 import util.BasicUtils;
 
+/**
+ * 分类页面
+ */
 public class OrderFragment extends Fragment {
 
     private TabLayout mTabLayout = null;
@@ -27,7 +30,6 @@ public class OrderFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-
         View view = inflater.inflate(R.layout.fragment_order, null);
         mTabLayout = view.findViewById(R.id.tab_layout);
         mViewPager = view.findViewById(R.id.tab_viewpager);

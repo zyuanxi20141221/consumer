@@ -1,5 +1,6 @@
 package com.xzxx.decorate.o2o.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -8,8 +9,8 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
-
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import com.xzxx.decorate.o2o.consumer.R;
 
 /**
@@ -19,6 +20,8 @@ import com.xzxx.decorate.o2o.consumer.R;
 public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
 
     private View viewContactService;
+    private LinearLayout ll_change_mobile;
+    private RelativeLayout ll_change_password;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,10 +32,15 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     void initView() {
+        ll_change_mobile = findViewById(R.id.id_ll_setting_change_mobile);
+        ll_change_password = findViewById(R.id.id_ll_setting_change_password);
         viewContactService = findViewById(R.id.id_setting_contact_service);
+
     }
 
     void initEvent() {
+        ll_change_mobile.setOnClickListener(this);
+        ll_change_password.setOnClickListener(this);
         viewContactService.setOnClickListener(this);
     }
 
@@ -43,10 +51,16 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.id_setting_contact_service) {
+        if (v.getId() == R.id.id_ll_setting_change_mobile) {
+            Intent changeMobile = new Intent(SettingActivity.this, ChangeMobieActivity.class);
+            startActivity(changeMobile);
+        } else if (v.getId() == R.id.id_ll_setting_change_password) {
+            Intent changePassword = new Intent(SettingActivity.this, ForgetPasswordActivity.class);
+            startActivity(changePassword);
+        } else if (v.getId() == R.id.id_setting_contact_service) {
             final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
             alertDialog.show();
-            alertDialog.setContentView(R.layout.layout_dialog_call);
+            alertDialog.setContentView(R.layout.dialog_call);
             Window window = alertDialog.getWindow();
             window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
             window.setBackgroundDrawableResource(android.R.color.white);

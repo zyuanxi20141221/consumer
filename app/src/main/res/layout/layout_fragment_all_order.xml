@@ -3,10 +3,9 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/id_listView_all_order"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_recyclerView_all_order"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

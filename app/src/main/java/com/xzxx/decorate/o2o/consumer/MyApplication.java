@@ -3,7 +3,6 @@ package com.xzxx.decorate.o2o.consumer;
 import android.app.Application;
 import android.content.Context;
 import android.util.DisplayMetrics;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

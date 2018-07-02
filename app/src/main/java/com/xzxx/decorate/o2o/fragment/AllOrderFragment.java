@@ -1,12 +1,14 @@
 package com.xzxx.decorate.o2o.fragment;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.RatingBar;
 import com.xzxx.decorate.o2o.adapter.AllOrderAdapter;
+import com.xzxx.decorate.o2o.adapter.RecyclerAdapter;
 import com.xzxx.decorate.o2o.bean.Order;
 import com.xzxx.decorate.o2o.consumer.R;
 import java.util.ArrayList;
@@ -34,9 +36,12 @@ public class AllOrderFragment extends BaseFragment {
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
         View view = inflater.inflate(R.layout.layout_fragment_all_order, container, false);
-        listView = view.findViewById(R.id.id_listView_all_order);
-        adapter = new AllOrderAdapter(listOrder, getActivity());
-        listView.setAdapter(adapter);
+        RecyclerView recyclerView = view.findViewById(R.id.id_recyclerView_all_order);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+        RecyclerAdapter adapter = new RecyclerAdapter(getContext(), listOrder);
+        recyclerView.setAdapter(adapter);
         return view;
     }
 }

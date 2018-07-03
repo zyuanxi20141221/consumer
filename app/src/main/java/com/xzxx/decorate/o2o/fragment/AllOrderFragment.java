@@ -14,6 +14,9 @@ import com.xzxx.decorate.o2o.consumer.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 所有订单
+ */
 public class AllOrderFragment extends BaseFragment {
 
     private ListView listView;
@@ -23,14 +26,40 @@ public class AllOrderFragment extends BaseFragment {
     @Override
     protected void loadData() {
         Order order = new Order();
-        order.setMaster_name("aaa");
+        order.setMaster_name("王师傅");
         order.setMaster_order_count(600);
         order.setMaster_start((float) 4.9);
         order.setOrder_address("广东省深圳市龙岗区");
         order.setMaster_title("电视维修");
+        order.setOrder_name("洗衣机维修");
+        order.setOrder_date("2018年5月19日");
         order.setOrder_price(300);
         order.setOrder_state(3);
         listOrder.add(order);
+
+        Order order2 = new Order();
+        order2.setMaster_name("王师傅");
+        order2.setMaster_order_count(600);
+        order2.setMaster_start((float) 4.9);
+        order2.setOrder_address("广东省深圳市龙岗区");
+        order2.setMaster_title("电视维修");
+        order2.setOrder_name("洗衣机维修");
+        order2.setOrder_date("2018年5月19日");
+        order2.setOrder_price(300);
+        order2.setOrder_state(3);
+        listOrder.add(order2);
+
+        Order order3 = new Order();
+        order3.setMaster_name("王师傅");
+        order3.setMaster_order_count(600);
+        order3.setMaster_start((float) 4.9);
+        order3.setOrder_address("广东省深圳市龙岗区");
+        order3.setMaster_title("电视维修");
+        order3.setOrder_name("洗衣机维修");
+        order3.setOrder_date("2018年5月19日");
+        order3.setOrder_price(300);
+        order3.setOrder_state(3);
+        listOrder.add(order3);
     }
 
     @Override

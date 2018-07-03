@@ -15,7 +15,7 @@ public class FragmentFactory {
                     baseFragment = new AllOrderFragment();
                     break;
                 case 1:
-                    baseFragment = new ToBeEvaluate();
+                    baseFragment = new ToBeEvaluateFragment();
                     break;
                 case 2:
                     baseFragment = new AfterSaleServiceFragment();

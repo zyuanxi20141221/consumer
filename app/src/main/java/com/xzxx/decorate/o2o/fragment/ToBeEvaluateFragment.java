@@ -8,7 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class ToBeEvaluate extends BaseFragment {
+/**
+ * 待评价
+ */
+public class ToBeEvaluateFragment extends BaseFragment {
 
     @Override
     protected void loadData() {

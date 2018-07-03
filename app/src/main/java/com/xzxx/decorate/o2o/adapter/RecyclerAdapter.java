@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.xzxx.decorate.o2o.bean.Order;
-import com.xzxx.decorate.o2o.consumer.MyApplication;
 import com.xzxx.decorate.o2o.consumer.R;
 
 import java.util.List;
@@ -39,23 +38,27 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.master_name_text.setText(list.get(position).getMaster_name());
-        Glide.with(mContext)
-                .load(list.get(position).getMaster_photo())
-                .into(holder.master_photo_image);
-        holder.master_order_count_text.setText(list.get(position).getMaster_order_count());
-        holder.master_title_text.setText(list.get(position).getMaster_title());
-        holder.order_state_text.setText(list.get(position).getOrder_state());
-        holder.order_name_text.setText(list.get(position).getOrder_name());
-        holder.order_date_text.setText(list.get(position).getOrder_date());
-        holder.order_address_text.setText(list.get(position).getOrder_address());
-        holder.order_price_text.setText(list.get(position).getOrder_price() + "");
+        if (list !=null && list.size() > 0) {
+            Order order = list.get(position);
+            if (order != null) {
+                holder.master_name_text.setText(order.getMaster_name());
+                Glide.with(mContext)
+                        .load(order.getMaster_photo())
+                        .into(holder.master_photo_image);
+                holder.master_order_count_text.setText(order.getMaster_order_count() + "");
+                holder.master_title_text.setText(order.getMaster_title());
+                holder.order_state_text.setText(order.getOrder_state() + "");
+                holder.order_name_text.setText(order.getOrder_name());
+                holder.order_date_text.setText(order.getOrder_date());
+                holder.order_address_text.setText(order.getOrder_address());
+                holder.order_price_text.setText(order.getOrder_price() + "");
+            }
+        }
     }
 
     @Override
     public int getItemCount() {
-//        return list == null ? 0 : list.size();
-        return 10;
+        return list == null ? 0 : list.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -63,9 +66,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         private TextView master_name_text;
         private ImageView master_photo_image;
         private TextView master_order_count_text;
-        private TextView master_start_text;
+        private TextView master_star_text;
         private TextView master_title_text;
-
         private TextView order_state_text;
         private TextView order_name_text;
         private TextView order_date_text;
@@ -77,7 +79,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             master_name_text = itemView.findViewById(R.id.id_master_name);
             master_photo_image = itemView.findViewById(R.id.id_master_photo);
             master_order_count_text = itemView.findViewById(R.id.id_master_order_count);
-            master_start_text = itemView.findViewById(R.id.id_master_start);
+            master_star_text = itemView.findViewById(R.id.id_master_star);
             master_title_text = itemView.findViewById(R.id.id_master_title);
             order_state_text = itemView.findViewById(R.id.order_state);
             order_name_text = itemView.findViewById(R.id.order_name);

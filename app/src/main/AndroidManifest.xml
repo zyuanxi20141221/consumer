@@ -89,13 +89,13 @@
 
         <!--登陆-->
         <activity android:name="com.xzxx.decorate.o2o.ui.LoginActivity">
-            <intent-filter>
+            <!--<intent-filter>-->
 
-                <action android:name="android.intent.action.MAIN"/>
+                <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
 
-            </intent-filter>
+            <!--</intent-filter>-->
         </activity>
 
         <!--新用户注册-->
@@ -116,6 +116,17 @@
 
         <!--新号码验证-->
         <activity android:name="com.xzxx.decorate.o2o.ui.NewMobileActivity">
+        </activity>
+
+        <!--订单详情-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.OrderDetail">
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
         </activity>
 
     </application>

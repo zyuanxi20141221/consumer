@@ -8,6 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+/**
+ * 售后服务
+ */
 public class AfterSaleServiceFragment extends BaseFragment {
 
     @Override

@@ -8,8 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-
-import com.xzxx.decorate.o2o.consumer.OrderFragment;
 import com.xzxx.decorate.o2o.consumer.R;
 import com.xzxx.decorate.o2o.fragment.BaseFragment;
 import com.xzxx.decorate.o2o.fragment.FragmentFactory;
@@ -50,16 +48,7 @@ public class OrderDetail extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-
-                    break;
-                case 1:
-                    break;
-                default:
-                    break;
-            }
-            BaseFragment fragment = FragmentFactory.createFragment(position);
+            BaseFragment fragment = FragmentFactory.createOrderFragment(position);
             return fragment;
         }
 

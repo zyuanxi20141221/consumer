@@ -88,6 +88,16 @@
 
     <string name="contact_master">联系师傅</string>
 
+    <string name="repair_cost">维修费</string>
+
+    <string name="order_number">订单编号</string>
+
+    <string name="order_date">订单时间</string>
+
+    <string name="payment_state">支付状态</string>
+    
+    <string name="payment_method">支付方式</string>
+
     /*-----------------------个人资料模块---------------------------------------*/
 
     <string name="sex">性别</string>

@@ -6,6 +6,8 @@ public class FragmentFactory {
 
     private static HashMap<Integer, BaseFragment> mBaseFragments = new HashMap<Integer, BaseFragment>();
 
+    private static HashMap<Integer, BaseFragment> mBaseOrderFragments = new HashMap<Integer, BaseFragment>();
+
     public static BaseFragment createFragment(int pos) {
         BaseFragment baseFragment = mBaseFragments.get(pos);
 
@@ -25,4 +27,23 @@ public class FragmentFactory {
         }
         return baseFragment;
     }
+
+    public static BaseFragment createOrderFragment(int pos) {
+        BaseFragment baseFragment = mBaseOrderFragments.get(pos);
+
+        if (baseFragment == null) {
+            switch (pos) {
+                case 0:
+                    baseFragment = new OrderContentFragment();
+                    break;
+                case 1:
+                    baseFragment = new OrderProgressFragment();
+                    break;
+            }
+            mBaseOrderFragments.put(pos, baseFragment);
+        }
+        return baseFragment;
+    }
+
+
 }

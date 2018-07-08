@@ -98,6 +98,30 @@
     
     <string name="payment_method">支付方式</string>
 
+    <string name="cost_detail">费用明细</string>
+
+    <string name="close_dialog">关闭</string>
+    
+    <string name="service_cost">服务费</string>
+
+    <string name="tip_cost">打赏小费</string>
+
+    <string name="sum_cost">合计</string>
+
+    <string name="service_evaluation">服务评价</string>
+
+    <string name="service_attitude">服务态度</string>
+
+    <string name="service_quality">服务质量</string>
+
+    <string name="service_efficiency">服务效率</string>
+
+    <string name="image_to_master">对师傅的映像</string>
+
+    <string name="select_three">可选三个选项</string>
+
+    <string name="commit">提交</string>
+
     /*-----------------------个人资料模块---------------------------------------*/
 
     <string name="sex">性别</string>

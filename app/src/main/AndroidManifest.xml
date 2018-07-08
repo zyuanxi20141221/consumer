@@ -120,6 +120,11 @@
 
         <!--订单详情-->
         <activity android:name="com.xzxx.decorate.o2o.ui.OrderDetail">
+
+        </activity>
+
+        <!--服务评价-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.ServiceEvaluation">
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN"/>

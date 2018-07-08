@@ -20,7 +20,9 @@ import java.util.List;
 
 public class VerticalStepView extends LinearLayout implements VerticalStepViewIndicator.OnDrawIndicatorListener {
     private RelativeLayout mTextContainer;
+    private RelativeLayout mTimeTextContainer;
     private VerticalStepViewIndicator mStepsViewIndicator;
+
     private List<String> mTexts;
 
     private List<String> mTextTime;
@@ -35,7 +37,7 @@ public class VerticalStepView extends LinearLayout implements VerticalStepViewIn
 
     private int mTextSize = 14;//default textSize
     private TextView mTextView;
-
+    private TextView mTimeTextView;
 
     public VerticalStepView(Context context) {
         this(context, null);
@@ -55,6 +57,7 @@ public class VerticalStepView extends LinearLayout implements VerticalStepViewIn
         mStepsViewIndicator = (VerticalStepViewIndicator) rootView.findViewById(R.id.steps_indicator);
         mStepsViewIndicator.setOnDrawListener(this);
         mTextContainer = (RelativeLayout) rootView.findViewById(R.id.rl_text_container);
+        mTimeTextContainer = (RelativeLayout) rootView.findViewById(R.id.rl_text_time_container);
     }
 
     @Override
@@ -207,7 +210,7 @@ public class VerticalStepView extends LinearLayout implements VerticalStepViewIn
     @Override
     public void ondrawIndicator() {
         if (mTextContainer != null) {
-            mTextContainer.removeAllViews();//clear ViewGroup
+            mTextContainer.removeAllViews();
             List<Float> complectedXPosition = mStepsViewIndicator.getCircleCenterPointPositionList();
             if (mTexts != null && complectedXPosition != null && complectedXPosition.size() > 0) {
                 for (int i = 0; i < mTexts.size(); i++) {
@@ -225,6 +228,23 @@ public class VerticalStepView extends LinearLayout implements VerticalStepViewIn
                         mTextView.setTextColor(mUnComplectedTextColor);
                     }
                     mTextContainer.addView(mTextView);
+                }
+            }
+        }
+        if(mTimeTextContainer != null) {
+            mTimeTextContainer.removeAllViews();
+            List<Float> complectedXPosition = mStepsViewIndicator.getCircleCenterPointPositionList();
+            if (mTextTime != null && complectedXPosition != null && complectedXPosition.size() > 0) {
+                for (int i = 0; i < mTextTime.size(); i++) {
+                    mTimeTextView = new TextView(getContext());
+                    mTimeTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, mTextSize);
+                    mTimeTextView.setText(mTextTime.get(i));
+                    mTimeTextView.setY((complectedXPosition.get(i) - mStepsViewIndicator.getCircleRadius() / 2) - 17);
+
+                    mTimeTextView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT));
+                    mTextView.setTextColor(mUnComplectedTextColor);
+                    mTimeTextContainer.addView(mTimeTextView);
                 }
             }
         }

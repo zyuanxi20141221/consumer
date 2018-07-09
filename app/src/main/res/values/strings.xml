@@ -74,6 +74,8 @@
 
     <string name="to_be_pay">待支付</string>
 
+    <string name="completed">已完成</string>
+
     <string name="setting">设置</string>
 
     <string name="ticket">优惠券</string>
@@ -121,6 +123,16 @@
     <string name="select_three">可选三个选项</string>
 
     <string name="commit">提交</string>
+
+    <string name="evaluation_complete">评价完成</string>
+
+    <string name="sum_score">综合评分</string>
+
+    <string name="complete">完成</string>
+
+    <string name="just_comment">立即评价</string>
+
+    <string name="lookup_comment">查看评价</string>
 
     /*-----------------------个人资料模块---------------------------------------*/
 

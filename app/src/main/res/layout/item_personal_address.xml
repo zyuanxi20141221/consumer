@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
-            android:src="@drawable/icon_check"/>
+            android:src="@drawable/icon_smallcheck"/>
 
         <TextView
             android:layout_width="wrap_content"

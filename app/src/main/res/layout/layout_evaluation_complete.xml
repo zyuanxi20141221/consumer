@@ -6,28 +6,23 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="@color/orange"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="18dp"
-            android:src="@drawable/icon_return"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/service_evaluation"
+            android:text="@string/evaluation_complete"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 
     </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -126,135 +121,69 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/sum_score"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
-            android:text="@string/service_attitude"
+            android:text="4.9"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="18sp"/>
 
         <com.xzxx.decorate.o2o.view.StarBar
             android:id="@+id/starBar_attitude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/display"
-            ratingbar:starCount="5"
-            ratingbar:starDistance="5dp"
-            android:layout_marginLeft="60dp"
-            ratingbar:starEmpty="@drawable/icon_bigstar_dark"
-            ratingbar:starFill="@drawable/icon_bigstar_bright"
-            ratingbar:starSize="20dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:text="@string/service_quality"
-            android:textColor="@color/black"
-            android:textSize="15sp"/>
-
-        <com.xzxx.decorate.o2o.view.StarBar
-            android:id="@+id/starBar_quality"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_below="@+id/display"
+            android:layout_marginLeft="10dp"
             ratingbar:starCount="5"
             ratingbar:starDistance="5dp"
-            android:layout_marginLeft="60dp"
             ratingbar:starEmpty="@drawable/icon_bigstar_dark"
             ratingbar:starFill="@drawable/icon_bigstar_bright"
             ratingbar:starSize="20dp"/>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:text="@string/service_efficiency"
-            android:textColor="@color/black"
-            android:textSize="15sp"/>
-
-        <com.xzxx.decorate.o2o.view.StarBar
-            android:id="@+id/starBar_efficiency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/display"
-            ratingbar:starCount="5"
-            ratingbar:starDistance="5dp"
-            android:layout_marginLeft="60dp"
-            ratingbar:starEmpty="@drawable/icon_bigstar_dark"
-            ratingbar:starFill="@drawable/icon_bigstar_bright"
-            ratingbar:starSize="20dp"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/image_to_master"
-        android:textColor="@color/black"
-        android:textSize="15sp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="@string/select_three"
-        android:textColor="@color/lightblack"
-        android:textSize="12sp"/>
 
     <com.xzxx.decorate.o2o.view.FlowLayout
-        android:id="@+id/id_service_eva_flow_layout"
+        android:id="@+id/id_evaluation_tags"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center_vertical">
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp">
+
     </com.xzxx.decorate.o2o.view.FlowLayout>
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/background_shape_radius_gray"
-        android:gravity="top"
-        android:hint="亲~请输入您的评价"
-        android:maxLines="50"
-        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="服务非常不错，师傅技术非常好很不错"
+        android:textColor="@color/lightblack"
         android:textSize="15sp"/>
 
     <com.phillipcalvin.iconbutton.IconButton
-        android:id="@+id/btn_evaluation_complete"
+        android:id="@+id/id_login"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/button_background_shape_radius"
-        android:text="@string/commit"
+        android:text="@string/complete"
         app:iconPadding="10dp"/>
 
 </LinearLayout>

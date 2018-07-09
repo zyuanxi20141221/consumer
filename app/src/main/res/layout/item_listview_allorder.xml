@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,8 +15,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center_vertical">
 
-            <com.makeramen.roundedimageview.RoundedImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+            <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/id_master_photo"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
@@ -27,7 +26,7 @@
                 app:riv_corner_radius="30dip"
                 app:riv_mutate_background="true"
                 app:riv_oval="true"
-                app:riv_tile_mode="repeat"/>
+                app:riv_tile_mode="repeat" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -46,14 +45,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="王师傅"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black" />
 
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:src="@drawable/icon_order"/>
+                        android:src="@drawable/icon_order" />
 
                     <TextView
                         android:id="@+id/id_master_order_count"
@@ -62,20 +61,20 @@
                         android:layout_marginLeft="3dp"
                         android:text="159单"
                         android:textColor="@color/lightblack"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
 
                     <View
                         android:layout_width="1dp"
                         android:layout_height="15dp"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="5dp"
-                        android:background="@color/gray"/>
+                        android:background="@color/gray" />
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="5dp"
-                        android:src="@drawable/icon_star_bright"/>
+                        android:src="@drawable/icon_star_bright" />
 
                     <TextView
                         android:id="@+id/id_master_star"
@@ -84,7 +83,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="4.9"
                         android:textColor="@color/lightblack"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -99,7 +98,7 @@
                         android:layout_height="match_parent"
                         android:text="家电维修师"
                         android:textColor="@color/lightblack"
-                        android:textSize="15sp"/>
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -121,7 +120,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="待支付"
-                android:textColor="@color/orange"/>
+                android:textColor="@color/orange" />
         </LinearLayout>
 
     </RelativeLayout>
@@ -139,7 +138,7 @@
             android:layout_marginLeft="20dp"
             android:text="洗衣机维修"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/order_date"
@@ -148,7 +147,7 @@
             android:layout_marginLeft="20dp"
             android:text="5月19日（周四）12:30"
             android:textColor="@color/lightblack"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -162,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:text="五和路新天下工业城3栋908A"
                 android:textColor="@color/lightblack"
-                android:textSize="15sp"/>
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/order_price"
@@ -171,37 +170,94 @@
                 android:layout_marginLeft="60dp"
                 android:text="390元"
                 android:textColor="@color/lightblack"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="15dp"
-            android:background="@color/gray">
-        </View>
+            android:background="@color/gray"></View>
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:layout_marginTop="15dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:id="@+id/ll_all_order_just_pay"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_wallet"/>
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="visible">
 
-            <TextView
-                android:layout_width="wrap_content"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_wallet" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/immediate_payment"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_all_order_recomment"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:text="@string/immediate_payment"
-                android:textColor="@color/orange"
-                android:textSize="15sp"/>
+                android:gravity="center_horizontal"
+                android:visibility="gone">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/icon_contact" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/contact_master"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="50dp"
+                    android:background="@color/gray"></View>
+
+                <ImageView
+                    android:id="@+id/image_recomment_or_lookup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/icon_comment" />
+
+                <TextView
+                    android:id="@+id/text_recomment_or_lookup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/just_comment"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
 
         <View
             android:layout_width="match_parent"

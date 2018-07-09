@@ -195,6 +195,7 @@
     </FrameLayout>
 
     <TextView
+        android:id="@+id/id_logit_forget_pwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="260dp"
@@ -231,7 +232,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="@string/new_user_rigester"
-                android:textColor="@color/lightblack"
+                android:textColor="@color/orange"
                 android:textSize="15sp"/>
 
 
@@ -247,7 +248,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="@string/verification_login"
-                android:textColor="@color/lightblack"
+                android:textColor="@color/orange"
                 android:textSize="15sp"/>
 
         </LinearLayout>
@@ -261,7 +262,7 @@
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
             android:text="@string/password_login"
-            android:textColor="@color/lightblack"
+            android:textColor="@color/orange"
             android:textSize="15sp"
             android:visibility="gone"/>
 

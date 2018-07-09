@@ -125,6 +125,7 @@
 
         <!--服务评价-->
         <activity android:name="com.xzxx.decorate.o2o.ui.ServiceEvaluation">
+
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN"/>
@@ -132,6 +133,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
 
             </intent-filter>
+
+        </activity>
+
+        <!--评价完成-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.EvaluationComplete">
+
         </activity>
 
     </application>

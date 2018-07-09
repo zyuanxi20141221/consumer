@@ -1,5 +1,6 @@
 package com.xzxx.decorate.o2o.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,8 @@ import com.xzxx.decorate.o2o.adapter.AllOrderAdapter;
 import com.xzxx.decorate.o2o.adapter.RecyclerAdapter;
 import com.xzxx.decorate.o2o.bean.Order;
 import com.xzxx.decorate.o2o.consumer.R;
+import com.xzxx.decorate.o2o.ui.OrderDetail;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +37,7 @@ public class AllOrderFragment extends BaseFragment {
         order.setOrder_name("洗衣机维修");
         order.setOrder_date("2018年5月19日");
         order.setOrder_price(300);
-        order.setOrder_state(3);
+        order.setOrder_state(1);
         listOrder.add(order);
 
         Order order2 = new Order();
@@ -46,7 +49,7 @@ public class AllOrderFragment extends BaseFragment {
         order2.setOrder_name("洗衣机维修");
         order2.setOrder_date("2018年5月19日");
         order2.setOrder_price(300);
-        order2.setOrder_state(3);
+        order2.setOrder_state(2);
         listOrder.add(order2);
 
         Order order3 = new Order();
@@ -71,6 +74,14 @@ public class AllOrderFragment extends BaseFragment {
         recyclerView.setLayoutManager(layoutManager);
         RecyclerAdapter adapter = new RecyclerAdapter(getContext(), listOrder);
         recyclerView.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(getActivity(), OrderDetail.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }

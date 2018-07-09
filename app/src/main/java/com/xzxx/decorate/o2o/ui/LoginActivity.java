@@ -7,9 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.phillipcalvin.iconbutton.IconButton;
-import com.xzxx.decorate.o2o.consumer.HomeFragment;
 import com.xzxx.decorate.o2o.consumer.MainActivity;
 import com.xzxx.decorate.o2o.consumer.R;
 
@@ -25,6 +23,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView verificationText;
     private TextView textLoginPwd;
     private TextView textRegister;
+    private TextView textForgetpwd;
     private View ll_login_select;
     private View ll_login_password;
     private View ll_login_verification;
@@ -46,14 +45,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         ll_login_select = findViewById(R.id.id_ll_login_select);
         ll_login_password = findViewById(R.id.id_ll_login_password);
         ll_login_verification = findViewById(R.id.id_ll_login_verification);
+        textForgetpwd = findViewById(R.id.id_logit_forget_pwd);
         iconButton = findViewById(R.id.id_login);
-    }
+
+   }
 
     private void initEvent() {
         textRegister.setOnClickListener(this);
         verificationText.setOnClickListener(this);
         textLoginPwd.setOnClickListener(this);
         iconButton.setOnClickListener(this);
+        textForgetpwd.setOnClickListener(this);
     }
 
     @Override
@@ -85,6 +87,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 ll_login_password.setVisibility(View.VISIBLE);
                 ll_login_verification.setVisibility(View.GONE);
                 textTitle.setText(getString(R.string.login));
+                break;
+            case R.id.id_logit_forget_pwd:
+                Intent forgetIntent = new Intent(LoginActivity.this, ForgetPasswordActivity.class);
+                startActivity(forgetIntent);
                 break;
             default:
                 break;

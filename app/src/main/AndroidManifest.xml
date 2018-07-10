@@ -45,13 +45,11 @@
         <!--主页面-->
         <activity android:name=".MainActivity">
 
-            <!--<intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-                <!--<action android:name="android.intent.action.MAIN"/>-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
 
         </activity>
 
@@ -91,9 +89,9 @@
         <activity android:name="com.xzxx.decorate.o2o.ui.LoginActivity">
             <!--<intent-filter>-->
 
-                <!--<action android:name="android.intent.action.MAIN"/>-->
+            <!--<action android:name="android.intent.action.MAIN"/>-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
 
             <!--</intent-filter>-->
         </activity>
@@ -119,25 +117,22 @@
         </activity>
 
         <!--订单详情-->
-        <activity android:name="com.xzxx.decorate.o2o.ui.OrderDetail">
+        <activity android:name="com.xzxx.decorate.o2o.ui.OrderDetailActivity">
 
         </activity>
 
         <!--服务评价-->
-        <activity android:name="com.xzxx.decorate.o2o.ui.ServiceEvaluation">
-
-            <intent-filter>
-
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-
-            </intent-filter>
+        <activity android:name="com.xzxx.decorate.o2o.ui.ServiceEvaluationActivity">
 
         </activity>
 
         <!--评价完成-->
-        <activity android:name="com.xzxx.decorate.o2o.ui.EvaluationComplete">
+        <activity android:name="com.xzxx.decorate.o2o.ui.EvaluationCompleteActivity">
+
+        </activity>
+
+        <!--我的评价-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.MyEvaluationActivity">
 
         </activity>
 

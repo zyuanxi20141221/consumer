@@ -16,11 +16,11 @@ import com.xzxx.decorate.o2o.fragment.FragmentFactory;
  * Created by zf on 2018/7/3.
  * 订单详情页面
  */
-public class OrderDetail extends AppCompatActivity {
+public class OrderDetailActivity extends AppCompatActivity {
 
     private TabLayout mTabLayout = null;
     private ViewPager mViewPager;
-    private OrderDetail.PageAdatper pageAdatper;
+    private OrderDetailActivity.PageAdatper pageAdatper;
     private int[] mTabTitles = new int[]{R.string.order_content, R.string.order_progress};
 
     @Override
@@ -29,7 +29,7 @@ public class OrderDetail extends AppCompatActivity {
         setContentView(R.layout.layout_order_detail);
         mTabLayout = findViewById(R.id.order_detail_tab_layout);
         mViewPager = findViewById(R.id.order_detail_tab_viewpager);
-        pageAdatper = new OrderDetail.PageAdatper(getSupportFragmentManager());
+        pageAdatper = new OrderDetailActivity.PageAdatper(getSupportFragmentManager());
         mViewPager.setOffscreenPageLimit(3);
         mViewPager.setAdapter(pageAdatper);
         mTabLayout.setupWithViewPager(mViewPager);

@@ -7,23 +7,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import com.xzxx.decorate.o2o.adapter.AllOrderAdapter;
 import com.xzxx.decorate.o2o.adapter.RecyclerAdapter;
 import com.xzxx.decorate.o2o.bean.Order;
 import com.xzxx.decorate.o2o.consumer.R;
-import com.xzxx.decorate.o2o.ui.OrderDetail;
-
+import com.xzxx.decorate.o2o.ui.OrderDetailActivity;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 所有订单
+ * 全部订单页面
  */
 public class AllOrderFragment extends BaseFragment {
 
-    private ListView listView;
-    private AllOrderAdapter adapter;
     private List<Order> listOrder = new ArrayList<>();
 
     @Override
@@ -37,7 +32,7 @@ public class AllOrderFragment extends BaseFragment {
         order.setOrder_name("洗衣机维修");
         order.setOrder_date("2018年5月19日");
         order.setOrder_price(300);
-        order.setOrder_state(1);
+        order.setOrder_state(0);
         listOrder.add(order);
 
         Order order2 = new Order();
@@ -49,7 +44,7 @@ public class AllOrderFragment extends BaseFragment {
         order2.setOrder_name("洗衣机维修");
         order2.setOrder_date("2018年5月19日");
         order2.setOrder_price(300);
-        order2.setOrder_state(2);
+        order2.setOrder_state(1);
         listOrder.add(order2);
 
         Order order3 = new Order();
@@ -61,8 +56,32 @@ public class AllOrderFragment extends BaseFragment {
         order3.setOrder_name("洗衣机维修");
         order3.setOrder_date("2018年5月19日");
         order3.setOrder_price(300);
-        order3.setOrder_state(3);
+        order3.setOrder_state(2);
         listOrder.add(order3);
+
+        Order order4 = new Order();
+        order4.setMaster_name("王师傅");
+        order4.setMaster_order_count(600);
+        order4.setMaster_start((float) 4.9);
+        order4.setOrder_address("广东省深圳市龙岗区");
+        order4.setMaster_title("电视维修");
+        order4.setOrder_name("洗衣机维修");
+        order4.setOrder_date("2018年5月19日");
+        order4.setOrder_price(300);
+        order4.setOrder_state(3);
+        listOrder.add(order4);
+
+        Order order5 = new Order();
+        order5.setMaster_name("王师傅");
+        order5.setMaster_order_count(600);
+        order5.setMaster_start((float) 4.9);
+        order5.setOrder_address("广东省深圳市龙岗区");
+        order5.setMaster_title("电视维修");
+        order5.setOrder_name("洗衣机维修");
+        order5.setOrder_date("2018年5月19日");
+        order5.setOrder_price(300);
+        order5.setOrder_state(4);
+        listOrder.add(order5);
     }
 
     @Override
@@ -78,7 +97,7 @@ public class AllOrderFragment extends BaseFragment {
         adapter.setOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Intent intent = new Intent(getActivity(), OrderDetail.class);
+                Intent intent = new Intent(getActivity(), OrderDetailActivity.class);
                 startActivity(intent);
             }
         });

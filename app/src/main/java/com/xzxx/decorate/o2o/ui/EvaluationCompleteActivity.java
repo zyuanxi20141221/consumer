@@ -15,7 +15,7 @@ import util.BasicUtils;
 /**
  * 评价完成页面
  */
-public class EvaluationComplete extends AppCompatActivity {
+public class EvaluationCompleteActivity extends AppCompatActivity {
 
     private FlowLayout flowLayout;
 

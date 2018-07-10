@@ -21,7 +21,7 @@ import util.BasicUtils;
  * Created by zf on 2018/7/7.
  * 服务评价页面
  */
-public class ServiceEvaluation extends AppCompatActivity implements View.OnClickListener {
+public class ServiceEvaluationActivity extends AppCompatActivity implements View.OnClickListener {
 
     private IconButton iconButton;
 
@@ -62,7 +62,7 @@ public class ServiceEvaluation extends AppCompatActivity implements View.OnClick
             TextView tv = new TextView(this);
             tv.setPadding(BasicUtils.dip2px(this, 12), 0, BasicUtils.dip2px(this, 12), 0);
             tv.setTextColor(Color.parseColor("#000000"));
-            tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
+            tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
             tv.setText(data[i]);
             tv.setGravity(Gravity.CENTER_VERTICAL);
             tv.setLines(1);
@@ -75,7 +75,7 @@ public class ServiceEvaluation extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_evaluation_complete:
-                Intent intent = new Intent(this, EvaluationComplete.class);
+                Intent intent = new Intent(this, EvaluationCompleteActivity.class);
                 startActivity(intent);
                 break;
         }

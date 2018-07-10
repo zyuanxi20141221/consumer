@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/evaluation_complete"
+            android:text="@string/my_evaluation"
             android:textColor="@color/white"
             android:textSize="20sp"/>
 
@@ -184,7 +184,7 @@
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginTop="200dp"
         android:background="@drawable/button_background_shape_radius"
-        android:text="@string/complete"
+        android:text="@string/delete"
         app:iconPadding="10dp"/>
 
 </LinearLayout>

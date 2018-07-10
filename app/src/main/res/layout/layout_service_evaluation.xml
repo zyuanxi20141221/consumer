@@ -66,6 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="王师傅"
+                    android:textSize="13sp"
                     android:textColor="@color/black"/>
 
                 <ImageView
@@ -81,7 +82,7 @@
                     android:layout_marginLeft="3dp"
                     android:text="159单"
                     android:textColor="@color/lightblack"
-                    android:textSize="15sp"/>
+                    android:textSize="13sp"/>
 
                 <View
                     android:layout_width="1dp"
@@ -103,7 +104,7 @@
                     android:layout_marginLeft="5dp"
                     android:text="4.9"
                     android:textColor="@color/lightblack"
-                    android:textSize="15sp"/>
+                    android:textSize="13sp"/>
 
             </LinearLayout>
 
@@ -118,7 +119,7 @@
                     android:layout_height="match_parent"
                     android:text="家电维修师"
                     android:textColor="@color/lightblack"
-                    android:textSize="15sp"/>
+                    android:textSize="13sp"/>
 
             </LinearLayout>
 
@@ -150,7 +151,7 @@
             android:layout_marginLeft="60dp"
             ratingbar:starEmpty="@drawable/icon_bigstar_dark"
             ratingbar:starFill="@drawable/icon_bigstar_bright"
-            ratingbar:starSize="20dp"/>
+            ratingbar:starSize="18dp"/>
 
     </LinearLayout>
 
@@ -178,7 +179,7 @@
             android:layout_marginLeft="60dp"
             ratingbar:starEmpty="@drawable/icon_bigstar_dark"
             ratingbar:starFill="@drawable/icon_bigstar_bright"
-            ratingbar:starSize="20dp"/>
+            ratingbar:starSize="18dp"/>
 
     </LinearLayout>
 
@@ -206,7 +207,7 @@
             android:layout_marginLeft="60dp"
             ratingbar:starEmpty="@drawable/icon_bigstar_dark"
             ratingbar:starFill="@drawable/icon_bigstar_bright"
-            ratingbar:starSize="20dp"/>
+            ratingbar:starSize="18dp"/>
 
     </LinearLayout>
 
@@ -225,7 +226,7 @@
         android:layout_marginLeft="20dp"
         android:text="@string/select_three"
         android:textColor="@color/lightblack"
-        android:textSize="12sp"/>
+        android:textSize="10sp"/>
 
     <com.xzxx.decorate.o2o.view.FlowLayout
         android:id="@+id/id_service_eva_flow_layout"

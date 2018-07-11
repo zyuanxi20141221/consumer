@@ -60,7 +60,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="30dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/icon_fail"
+                    android:src="@color/orange"
                     app:riv_corner_radius="30dip"
                     app:riv_mutate_background="true"
                     app:riv_oval="true"

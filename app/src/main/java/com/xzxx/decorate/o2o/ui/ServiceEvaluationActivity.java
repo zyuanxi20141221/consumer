@@ -77,6 +77,7 @@ public class ServiceEvaluationActivity extends AppCompatActivity implements View
             case R.id.btn_evaluation_complete:
                 Intent intent = new Intent(this, EvaluationCompleteActivity.class);
                 startActivity(intent);
+                finish();
                 break;
         }
     }

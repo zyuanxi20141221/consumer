@@ -26,7 +26,7 @@
     <string name="open_city">开通城市</string>
     <string name="personal_service_address">我的服务地址</string>
     <string name="add_address">新增地址</string>
-    
+
     <string name="add_one_address">添加地址</string>
     <string name="save_address">保存</string>
     <string name="contact">联系人</string>
@@ -35,6 +35,10 @@
     <string name="personal_address">我的地址</string>
 
     <string name="edit">编辑</string>
+
+    <string name="explain">说明</string>
+
+    <string name="personal_coupon">我的优惠券</string>
 
     <string name="default_address">默认地址</string>
 
@@ -68,6 +72,8 @@
 
     <string name="immediate_payment">立即支付</string>
 
+    <string name="progress_after_sale">售后进度</string>
+
     <string name="personal_center">个人中心</string>
 
     <string name="to_be_service">待服务</string>
@@ -77,6 +83,12 @@
     <string name="to_be_pay">待支付</string>
 
     <string name="completed">已完成</string>
+
+    <string name="applyed">已申请</string>
+    
+    <string name="in_produce">处理中</string>
+
+    <string name="refunds">退款中</string>
 
     <string name="setting">设置</string>
 
@@ -99,13 +111,13 @@
     <string name="order_date">订单时间</string>
 
     <string name="payment_state">支付状态</string>
-    
+
     <string name="payment_method">支付方式</string>
 
     <string name="cost_detail">费用明细</string>
 
     <string name="close_dialog">关闭</string>
-    
+
     <string name="service_cost">服务费</string>
 
     <string name="tip_cost">打赏小费</string>
@@ -137,7 +149,7 @@
     <string name="just_comment">立即评价</string>
 
     <string name="lookup_comment">查看评价</string>
-    
+
     <string name="my_evaluation">我的评价</string>
 
     <string name="whether_cancel_order">是否取消订单？</string>
@@ -149,6 +161,32 @@
     <string name="republish_order">重新发布</string>
 
     <string name="cancel_order_no">暂不取消</string>
+
+    <string name="apply_after_service">申请售后服务</string>
+
+    <string name="service_type">服务类型</string>
+
+    <string name="apply_reason">申请原因</string>
+
+    <string name="cancel_order_reason">取消订单原因</string>
+
+    <string name="apply_after_service_success">售后申请成功！</string>
+
+    <string name="complaint_commit_success">投诉提交成功！</string>
+
+    <string name="commited_to_customer_service">已提交给客服，我们将与您联系</string>
+    
+    <string name="feedback_to_customer_service">已反馈给客服，我们将认真核实</string>
+
+    <string name="back_to_order">返回订单</string>
+
+    <string name="to_be_complaint">我要投诉</string>
+
+    <string name="sure_to_commit">确认提交</string>
+
+    <string name="apply_after_sale">申请售后</string>
+
+    <string name="delete_order">删除订单</string>
 
     /*-----------------------个人资料模块---------------------------------------*/
 
@@ -172,7 +210,7 @@
 
     <string name="clean_cache">清理缓存</string>
 
-    <string name ="service_leader">服务指南</string>
+    <string name="service_leader">服务指南</string>
 
     <string name="loginout">退出登陆</string>
 
@@ -181,6 +219,12 @@
     <string name="cancel_call">取消呼叫</string>
 
     <string name="call_service">呼叫客服</string>
+
+    <string name="avliable_coupon">可用券</string>
+
+    <string name="unavliable_coupon">不可用</string>
+
+    <string name="invalie_coupon">已失效</string>
 
     /*-----------------------登陆模块---------------------------------------*/
 
@@ -209,7 +253,7 @@
     <string name="user_register">用戶注冊</string>
 
     <string name="input_verification">请输入验证码</string>
-    
+
     <string name="register_nextstep">下一步</string>
 
     <string name="setting_login_password">设置登陆密码</string>

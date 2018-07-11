@@ -3,14 +3,10 @@ package com.xzxx.decorate.o2o.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,8 +14,9 @@ import android.widget.Toast;
 
 import com.xzxx.decorate.o2o.bean.Order;
 import com.xzxx.decorate.o2o.consumer.R;
-import com.xzxx.decorate.o2o.ui.MyEvaluationActivity;
+import com.xzxx.decorate.o2o.ui.PersonalEvaluationActivity;
 import com.xzxx.decorate.o2o.ui.ServiceEvaluationActivity;
+import com.xzxx.decorate.o2o.view.CommonDialog;
 
 import java.util.List;
 
@@ -43,40 +40,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                 mContext.startActivity(evaluationIntent);
                 break;
             case R.id.ll_order_look_comment:
-                Intent myEvaluationIntent = new Intent(mContext, MyEvaluationActivity.class);
+                Intent myEvaluationIntent = new Intent(mContext, PersonalEvaluationActivity.class);
                 mContext.startActivity(myEvaluationIntent);
                 break;
             case R.id.ll_order_cancel:
-                final AlertDialog alertDialog = new AlertDialog.Builder(mContext).create();
-                alertDialog.show();
-                alertDialog.setContentView(R.layout.dialog_cacel_order);
-                Window window = alertDialog.getWindow();
-                window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-                window.setBackgroundDrawableResource(android.R.color.white);
-                window.setGravity(Gravity.BOTTOM);
-                window.setWindowAnimations(R.style.AlertDialog_AppCompat);
-                TextView cancel = alertDialog.findViewById(R.id.id_cancel_order_no);
-                cancel.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        alertDialog.dismiss();
-                    }
-                });
-                TextView sure = alertDialog.findViewById(R.id.id_cancel_order_sure);
-                sure.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                    }
-                });
-
-                TextView republish = alertDialog.findViewById(R.id.id_cancel_order_republish);
-                republish.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                    }
-                });
+                CommonDialog.cancelOrderDialog(mContext);
                 break;
             case R.id.ll_order_start_chat:
                 Toast.makeText(mContext, "start chat click", Toast.LENGTH_LONG).show();
@@ -176,6 +144,34 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
                     holder.ll_order_just_comment.setVisibility(View.GONE);
                     holder.ll_order_look_comment.setVisibility(View.VISIBLE);
+                } else if(order.getOrder_state() == 5) {  //售后服务已申请
+                    holder.order_state_text.setText(mContext.getString(R.string.applyed));
+                    holder.ll_to_be_pay.setVisibility(View.GONE);
+                    holder.ll_all_order_complete.setVisibility(View.GONE);
+                    holder.ll_order_just_comment.setVisibility(View.GONE);
+                    holder.ll_order_look_comment.setVisibility(View.GONE);
+                    holder.ll_all_order_after_sale_progress.setVisibility(View.VISIBLE);
+                } else if(order.getOrder_state() == 6) {  //售后服务处理中
+                    holder.order_state_text.setText(mContext.getString(R.string.in_produce));
+                    holder.ll_to_be_pay.setVisibility(View.GONE);
+                    holder.ll_all_order_complete.setVisibility(View.GONE);
+                    holder.ll_order_just_comment.setVisibility(View.GONE);
+                    holder.ll_order_look_comment.setVisibility(View.GONE);
+                    holder.ll_all_order_after_sale_progress.setVisibility(View.VISIBLE);
+                } else if(order.getOrder_state() == 7) {  //售后服务退款中
+                    holder.order_state_text.setText(mContext.getString(R.string.refunds));
+                    holder.ll_to_be_pay.setVisibility(View.GONE);
+                    holder.ll_all_order_complete.setVisibility(View.GONE);
+                    holder.ll_order_just_comment.setVisibility(View.GONE);
+                    holder.ll_order_look_comment.setVisibility(View.GONE);
+                    holder.ll_all_order_after_sale_progress.setVisibility(View.VISIBLE);
+                } else if(order.getOrder_state() == 8) { //售后服务已完成
+                    holder.order_state_text.setText(mContext.getString(R.string.completed));
+                    holder.ll_to_be_pay.setVisibility(View.GONE);
+                    holder.ll_all_order_complete.setVisibility(View.GONE);
+                    holder.ll_order_just_comment.setVisibility(View.GONE);
+                    holder.ll_order_look_comment.setVisibility(View.GONE);
+                    holder.ll_all_order_after_sale_progress.setVisibility(View.VISIBLE);
                 }
                 holder.order_name_text.setText(order.getOrder_name());
                 holder.order_date_text.setText(order.getOrder_date());
@@ -213,10 +209,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
         private TextView order_price_text;
 
         private LinearLayout ll_to_be_pay; //立即支付
+        private LinearLayout ll_all_order_after_sale_progress; //售后进度
         private LinearLayout ll_all_order_complete; //订单已完成，待评价
         private LinearLayout ll_order_just_comment;
         private LinearLayout ll_order_look_comment;
-        private LinearLayout ll_all_order_to_bo_service;
+        private LinearLayout ll_all_order_to_bo_service; //售后进度
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -232,6 +229,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             order_price_text = itemView.findViewById(R.id.order_price);
 
             ll_to_be_pay = itemView.findViewById(R.id.ll_all_order_just_pay);
+            ll_all_order_after_sale_progress = itemView.findViewById(R.id.ll_all_order_after_sale_progress);
             ll_all_order_complete = itemView.findViewById(R.id.ll_all_order_complete);
 
             ll_order_just_comment = itemView.findViewById(R.id.ll_order_just_comment);

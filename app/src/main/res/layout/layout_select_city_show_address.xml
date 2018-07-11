@@ -167,6 +167,7 @@
     </ListView>
 
     <LinearLayout
+        android:id="@+id/ll_select_city_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="28dp"

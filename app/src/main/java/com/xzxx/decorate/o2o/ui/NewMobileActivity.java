@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.phillipcalvin.iconbutton.IconButton;
 import com.xzxx.decorate.o2o.consumer.R;
@@ -43,5 +44,13 @@ public class NewMobileActivity extends AppCompatActivity implements View.OnClick
         window.setBackgroundDrawableResource(android.R.color.white);
         window.setGravity(Gravity.BOTTOM);
         window.setWindowAnimations(R.style.AlertDialog_AppCompat);
+
+        TextView id_register_just_login_ok = alertDialog.findViewById(R.id.id_register_just_login_ok);
+        id_register_just_login_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog.dismiss();
+            }
+        });
     }
 }

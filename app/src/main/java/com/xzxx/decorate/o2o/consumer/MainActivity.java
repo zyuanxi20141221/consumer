@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements TabHost.OnTabChan
         fragmentTabHost.setCurrentTab(0);
     }
 
-
     @Override
     public void onTabChanged(String tabId) {
 

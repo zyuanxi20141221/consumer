@@ -20,6 +20,7 @@
             android:textSize="20sp" />
 
         <TextView
+            android:id="@+id/txt_release_order_close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -41,7 +42,7 @@
             android:layout_height="match_parent" />
 
         <com.phillipcalvin.iconbutton.IconButton
-            android:id="@+id/id_cancel_order"
+            android:id="@+id/btn_cancel_order"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"

@@ -26,6 +26,7 @@
             android:textSize="20sp"/>
 
         <TextView
+            android:id="@+id/txt_add_address_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -152,6 +153,7 @@
         android:textSize="18sp"/>
 
     <LinearLayout
+        android:id="@+id/ll_personal_address_zone"
         android:layout_width="match_parent"
         android:layout_height="60dp">
 
@@ -186,6 +188,7 @@
         android:background="@color/gray"/>
 
     <LinearLayout
+        android:id="@+id/ll_personal_address_detail"
         android:layout_width="match_parent"
         android:layout_height="60dp">
 

@@ -32,7 +32,7 @@ public class AfterSaleServiceFragment extends BaseFragment {
         order.setOrder_name("洗衣机维修");
         order.setOrder_date("2018年5月19日");
         order.setOrder_price(300);
-        order.setOrder_state(4);
+        order.setOrder_state(5);
         listOrder.add(order);
 
         Order order2 = new Order();
@@ -44,7 +44,7 @@ public class AfterSaleServiceFragment extends BaseFragment {
         order2.setOrder_name("洗衣机维修");
         order2.setOrder_date("2018年5月19日");
         order2.setOrder_price(300);
-        order2.setOrder_state(4);
+        order2.setOrder_state(6);
         listOrder.add(order2);
 
         Order order3 = new Order();
@@ -56,8 +56,20 @@ public class AfterSaleServiceFragment extends BaseFragment {
         order3.setOrder_name("洗衣机维修");
         order3.setOrder_date("2018年5月19日");
         order3.setOrder_price(300);
-        order3.setOrder_state(4);
+        order3.setOrder_state(7);
         listOrder.add(order3);
+
+        Order order4 = new Order();
+        order4.setMaster_name("王师傅");
+        order4.setMaster_order_count(600);
+        order4.setMaster_start((float) 4.9);
+        order4.setOrder_address("广东省深圳市龙岗区");
+        order4.setMaster_title("电视维修");
+        order4.setOrder_name("洗衣机维修");
+        order4.setOrder_date("2018年5月19日");
+        order4.setOrder_price(300);
+        order4.setOrder_state(8);
+        listOrder.add(order4);
     }
 
     @Override

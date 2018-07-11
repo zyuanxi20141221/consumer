@@ -11,7 +11,8 @@ public class Order {
     private float master_start;
     private String master_title;
 
-    private int order_state; //0 待服务 1 服务中 2 待支付 3:已完成 未评价  4：已完成 已评价
+    private int order_state; //0 待服务 1 服务中 2 待支付 3:已完成 未评价  4：已完成 已评价 5:售后服务已申请
+                             // 6：售后服务处理中 7：售后服务退款中 8：售后服务已完成
     private String order_name;
     private String order_date;
     private String order_address;

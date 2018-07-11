@@ -6,9 +6,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.phillipcalvin.iconbutton.IconButton;
 import com.xzxx.decorate.o2o.consumer.R;
 import com.xzxx.decorate.o2o.view.FlowLayout;
 
@@ -17,17 +20,21 @@ import util.BasicUtils;
 /**
  * 我的评价页面
  */
-public class MyEvaluationActivity extends AppCompatActivity {
+public class PersonalEvaluationActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FlowLayout flowLayout;
 
     private String[] lables = new String[]{"态度良好", "效率很高", "技术专业"};
+
+    private IconButton btn_evaluation_delete;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_my_evaluation);
         flowLayout = findViewById(R.id.id_evaluation_tags);
+        btn_evaluation_delete = findViewById(R.id.btn_evaluation_delete);
+        btn_evaluation_delete.setOnClickListener(this);
         initData();
     }
 
@@ -57,5 +64,15 @@ public class MyEvaluationActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_evaluation_delete:
+                Toast.makeText(getApplicationContext(), "评价删除成功", Toast.LENGTH_LONG).show();
+                finish();
+                break;
+        }
     }
 }

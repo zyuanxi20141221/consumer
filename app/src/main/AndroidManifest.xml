@@ -46,9 +46,11 @@
         <activity android:name=".MainActivity">
 
             <intent-filter>
+
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
 
         </activity>
@@ -94,6 +96,7 @@
             <!--<category android:name="android.intent.category.LAUNCHER"/>-->
 
             <!--</intent-filter>-->
+
         </activity>
 
         <!--新用户注册-->
@@ -132,7 +135,22 @@
         </activity>
 
         <!--我的评价-->
-        <activity android:name="com.xzxx.decorate.o2o.ui.MyEvaluationActivity">
+        <activity android:name="com.xzxx.decorate.o2o.ui.PersonalEvaluationActivity">
+
+        </activity>
+
+        <!--申请售后服务-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.ApplyAfterServiceActivity">
+
+        </activity>
+
+        <!--我要投诉-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.ComplaintActivity">
+
+        </activity>
+
+        <!--我的优惠券-->
+        <activity android:name="com.xzxx.decorate.o2o.ui.PersonalCouponActivity">
 
         </activity>
 

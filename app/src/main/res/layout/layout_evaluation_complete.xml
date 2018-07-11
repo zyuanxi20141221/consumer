@@ -178,7 +178,7 @@
         android:textSize="15sp"/>
 
     <com.phillipcalvin.iconbutton.IconButton
-        android:id="@+id/id_login"
+        android:id="@+id/btn_evaluation_complete"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"

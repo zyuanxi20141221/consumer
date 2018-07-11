@@ -11,7 +11,11 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.phillipcalvin.iconbutton.IconButton;
 import com.xzxx.decorate.o2o.consumer.R;
+import com.xzxx.decorate.o2o.view.CommonDialog;
 
 /**
  * Created by zf on 2018/7/3.
@@ -22,6 +26,8 @@ public class OrderContentFragment extends BaseFragment implements View.OnClickLi
     private LinearLayout ll_more;
     private TextView text_more;
     private RelativeLayout rl_view;
+    private LinearLayout ll_order_content_cancel;
+    private LinearLayout ll_order_content_contact;
 
     @Override
     protected void loadData() {
@@ -31,37 +37,33 @@ public class OrderContentFragment extends BaseFragment implements View.OnClickLi
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle bundle) {
         View view = inflater.inflate(R.layout.layout_order_content, container, false);
-        text_more = view.findViewById(R.id.id_order_content_move);
+        text_more = view.findViewById(R.id.id_order_content_more);
         ll_more = view.findViewById(R.id.ll_order_content_more);
         rl_view = view.findViewById(R.id.id_order_content_cost);
+        ll_order_content_cancel = view.findViewById(R.id.ll_order_content_cancel);
+        ll_order_content_contact = view.findViewById(R.id.ll_order_content_contact);
         text_more.setOnClickListener(this);
         rl_view.setOnClickListener(this);
+        ll_order_content_cancel.setOnClickListener(this);
+        ll_order_content_contact.setOnClickListener(this);
         return view;
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.id_order_content_move:
+            case R.id.id_order_content_more:
                 text_more.setVisibility(View.GONE);
                 ll_more.setVisibility(View.VISIBLE);
                 break;
             case R.id.id_order_content_cost:
-                final AlertDialog alertDialog = new AlertDialog.Builder(getActivity()).create();
-                alertDialog.show();
-                alertDialog.setContentView(R.layout.dialog_order_cost_detail);
-                Window window = alertDialog.getWindow();
-                window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
-                window.setBackgroundDrawableResource(android.R.color.white);
-                window.setGravity(Gravity.BOTTOM);
-                window.setWindowAnimations(R.style.AlertDialog_AppCompat);
-                final TextView closeText = window.findViewById(R.id.id_order_content_dialog_close);
-                closeText.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        alertDialog.dismiss();
-                    }
-                });
+                CommonDialog.costDialog(getActivity());
+                break;
+            case R.id.ll_order_content_cancel:
+                CommonDialog.cancelOrderDialog(getActivity());
+                break;
+            case R.id.ll_order_content_contact:
+
                 break;
             default:
                 break;

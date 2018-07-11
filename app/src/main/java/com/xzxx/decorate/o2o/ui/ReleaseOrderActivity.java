@@ -1,10 +1,15 @@
 package com.xzxx.decorate.o2o.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
@@ -15,20 +20,30 @@ import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.MapView;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.MyLocationStyle;
+import com.phillipcalvin.iconbutton.IconButton;
 import com.xzxx.decorate.o2o.consumer.R;
+
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 发布订单页面
  * Created by zf on 2018/6/18.
  */
-public class ReleaseOrderActivity extends AppCompatActivity implements LocationSource, AMapLocationListener {
+public class ReleaseOrderActivity extends AppCompatActivity implements LocationSource, AMapLocationListener, View
+        .OnClickListener {
 
     private MapView mMapView;
     private AMap aMap;
     private MyLocationStyle myLocationStyle;
     private AMapLocationClient mLocationClient;
+
+    private TextView closeText;
+    private IconButton cancelOrder;
+    private TextView release_order_timer;
 
     //声明mLocationOption对象，定位参数
     public AMapLocationClientOption mLocationOption = null;
@@ -36,6 +51,22 @@ public class ReleaseOrderActivity extends AppCompatActivity implements LocationS
     private OnLocationChangedListener mListener = null;
     //标识，用于判断是否只显示一次定位信息和用户重新定位
     private boolean isFirstLoc = true;
+
+    private int time = 10;
+
+    CountDownTimer cdt = new CountDownTimer(10000, 1000) {
+        @Override
+        public void onTick(long millisUntilFinished) {
+            time--;
+            release_order_timer.setText(time + "");
+        }
+
+        @Override
+        public void onFinish() {
+            Intent intent = new Intent(ReleaseOrderActivity.this, WaitServiceActivity.class);
+            startActivity(intent);
+        }
+    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,7 +91,13 @@ public class ReleaseOrderActivity extends AppCompatActivity implements LocationS
             aMap.setLocationSource(this);//设置了定位的监听
         }
 
+        closeText = findViewById(R.id.txt_release_order_close);
+        cancelOrder = findViewById(R.id.btn_cancel_order);
+        release_order_timer = findViewById(R.id.id_release_order_timer);
+        closeText.setOnClickListener(this);
+        cancelOrder.setOnClickListener(this);
         location();
+        cdt.start();
     }
 
 
@@ -94,6 +131,7 @@ public class ReleaseOrderActivity extends AppCompatActivity implements LocationS
     protected void onDestroy() {
         super.onDestroy();
         mMapView.onDestroy();
+        cdt.cancel();
         mLocationClient.stopLocation();//停止定位
         mLocationClient.onDestroy();//销毁定位客户端。
     }
@@ -175,5 +213,18 @@ public class ReleaseOrderActivity extends AppCompatActivity implements LocationS
     @Override
     public void deactivate() {
         mListener = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.txt_release_order_close:
+                finish();
+                break;
+            case R.id.btn_cancel_order:
+                Toast.makeText(getApplicationContext(), "订单已取消", Toast.LENGTH_LONG).show();
+                finish();
+                break;
+        }
     }
 }

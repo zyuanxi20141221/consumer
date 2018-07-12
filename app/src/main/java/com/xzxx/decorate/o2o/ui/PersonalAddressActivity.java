@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import com.xzxx.decorate.o2o.adapter.PersonalAddressAdapter;
@@ -21,6 +22,7 @@ public class PersonalAddressActivity extends AppCompatActivity implements View.O
 
     private ListView listView;
     private PersonalAddressAdapter addressAdapter;
+    private ImageView personal_address_back;
     private List<PersonalAddress> personalAddressList = new ArrayList<>();
 
     private LinearLayout ll_personal_address_add;
@@ -31,10 +33,12 @@ public class PersonalAddressActivity extends AppCompatActivity implements View.O
         setContentView(R.layout.layout_personal_address);
         listView = findViewById(R.id.list_personal_address);
         ll_personal_address_add = findViewById(R.id.ll_personal_address_add);
+        personal_address_back = findViewById(R.id.id_personal_address_back);
         initData();
         addressAdapter = new PersonalAddressAdapter(this, personalAddressList);
         listView.setAdapter(addressAdapter);
         addressAdapter.notifyDataSetChanged();
+        personal_address_back.setOnClickListener(this);
         ll_personal_address_add.setOnClickListener(this);
     }
 
@@ -66,6 +70,9 @@ public class PersonalAddressActivity extends AppCompatActivity implements View.O
     @Override
     public void onClick(View v) {
          switch (v.getId()) {
+             case R.id.id_personal_address_back:
+                 finish();
+                 break;
              case R.id.ll_personal_address_add:
                  Intent addAddressintent = new Intent(this,AddAddressActivity.class);
                  startActivity(addAddressintent);

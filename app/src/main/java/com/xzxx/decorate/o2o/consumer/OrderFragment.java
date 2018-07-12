@@ -6,6 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +35,7 @@ public class OrderFragment extends Fragment {
         mTabLayout = view.findViewById(R.id.tab_layout);
         mViewPager = view.findViewById(R.id.tab_viewpager);
         reflex(mTabLayout);
-        pageAdatper = new PageAdatper(getFragmentManager());
+        pageAdatper = new PageAdatper(getChildFragmentManager());
         mViewPager.setOffscreenPageLimit(3);
         mViewPager.setAdapter(pageAdatper);
         mTabLayout.setupWithViewPager(mViewPager);

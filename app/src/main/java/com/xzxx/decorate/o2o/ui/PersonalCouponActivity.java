@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.xzxx.decorate.o2o.consumer.R;
@@ -21,10 +22,11 @@ import util.BasicUtils;
  * Created by zf on 2018/7/12.
  * 我的优惠券页面
  */
-public class PersonalCouponActivity extends AppCompatActivity {
+public class PersonalCouponActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TabLayout mTabLayout = null;
     private ViewPager mViewPager;
+    private ImageView personal_coupon_back;
     private PersonalCouponActivity.PageAdatper pageAdatper;
     private int[] mTabTitles = new int[]{R.string.avliable_coupon, R.string.unavliable_coupon, R.string.invalie_coupon};
 
@@ -35,6 +37,8 @@ public class PersonalCouponActivity extends AppCompatActivity {
 
         mTabLayout = findViewById(R.id.tab_layout_coupon);
         mViewPager = findViewById(R.id.tab_viewpager_coupon);
+        personal_coupon_back = findViewById(R.id.id_personal_coupon_back);
+        personal_coupon_back.setOnClickListener(this);
         reflex(mTabLayout);
         pageAdatper = new PersonalCouponActivity.PageAdatper(getSupportFragmentManager());
         mViewPager.setOffscreenPageLimit(3);
@@ -76,9 +80,19 @@ public class PersonalCouponActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.id_personal_coupon_back:
+                finish();
+                break;
+        }
     }
 
     private class PageAdatper extends FragmentPagerAdapter {

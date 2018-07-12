@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,11 +12,12 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/id_setting_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="18dp"
-            android:src="@drawable/icon_return"/>
+            android:src="@drawable/icon_return" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -24,29 +25,31 @@
             android:layout_centerInParent="true"
             android:text="@string/setting"
             android:textColor="@color/white"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_setting_change_mobile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="60dp"
+        android:background="@drawable/button_selector">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:gravity="center_horizontal"
             android:text="@string/change_phone_number"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <LinearLayout
-            android:id="@+id/id_ll_setting_change_mobile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:orientation="horizontal">
 
@@ -56,14 +59,14 @@
                 android:gravity="center_horizontal"
                 android:text="15912345678"
                 android:textColor="@color/lightblack"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/icon_next"/>
+                android:src="@drawable/icon_next" />
 
         </LinearLayout>
 
@@ -72,27 +75,28 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/gray"/>
+        android:background="@color/gray" />
 
     <RelativeLayout
-        android:id="@+id/id_ll_setting_change_password"
+        android:id="@+id/rl_setting_change_password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="60dp"
+        android:background="@drawable/button_selector">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:text="@string/login_password"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
             android:orientation="horizontal">
 
@@ -101,14 +105,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/modify"
                 android:textColor="@color/lightblack"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/icon_next"/>
+                android:src="@drawable/icon_next" />
         </LinearLayout>
 
     </RelativeLayout>
@@ -116,21 +120,22 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/gray"/>
+        android:background="@color/gray" />
 
     <RelativeLayout
+        android:id="@+id/rl_setting_about_us"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="60dp"
+        android:background="@drawable/button_selector">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:text="@string/about_ower"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -138,29 +143,29 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:src="@drawable/icon_next"/>
+            android:src="@drawable/icon_next" />
 
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/gray"/>
+        android:background="@color/gray" />
 
     <RelativeLayout
-        android:id="@+id/id_setting_contact_service"
+        android:id="@+id/rl_setting_contact_service"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="60dp"
+        android:background="@drawable/button_selector">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:text="@string/contact_service"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -168,28 +173,29 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:src="@drawable/icon_next"/>
+            android:src="@drawable/icon_next" />
 
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/gray"/>
+        android:background="@color/gray" />
 
     <RelativeLayout
+        android:id="@+id/rl_setting_clear_cache"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="60dp"
+        android:background="@drawable/button_selector">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:text="@string/clean_cache"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -197,28 +203,29 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:src="@drawable/icon_next"/>
+            android:src="@drawable/icon_next" />
 
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/gray"/>
+        android:background="@color/gray" />
 
     <RelativeLayout
+        android:id="@+id/rl_setting_service_leader"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_height="60dp"
+        android:background="@drawable/button_selector">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:text="@string/service_leader"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -226,7 +233,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:src="@drawable/icon_next"/>
+            android:src="@drawable/icon_next" />
 
     </RelativeLayout>
 
@@ -234,8 +241,8 @@
         android:id="@+id/id_cancel_order"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="70dp"
         android:background="@drawable/button_background_shape_radius"
         android:text="@string/loginout"
         app:iconPadding="10dp" />

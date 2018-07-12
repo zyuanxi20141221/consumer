@@ -9,8 +9,11 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.xzxx.decorate.o2o.consumer.R;
 
 /**
@@ -19,9 +22,14 @@ import com.xzxx.decorate.o2o.consumer.R;
  */
 public class SettingActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private View viewContactService;
-    private LinearLayout ll_change_mobile;
-    private RelativeLayout ll_change_password;
+    private RelativeLayout rl_setting_change_mobile;
+    private RelativeLayout rl_setting_change_password;
+    private RelativeLayout rl_setting_about_us;
+    private RelativeLayout rl_setting_contact_service;
+    private RelativeLayout rl_setting_clear_cache;
+    private RelativeLayout rl_setting_service_leader;
+
+    private ImageView setting_back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,16 +40,23 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
     }
 
     void initView() {
-        ll_change_mobile = findViewById(R.id.id_ll_setting_change_mobile);
-        ll_change_password = findViewById(R.id.id_ll_setting_change_password);
-        viewContactService = findViewById(R.id.id_setting_contact_service);
-
+        setting_back = findViewById(R.id.id_setting_back);
+        rl_setting_change_mobile = findViewById(R.id.rl_setting_change_mobile);
+        rl_setting_change_password = findViewById(R.id.rl_setting_change_password);
+        rl_setting_about_us = findViewById(R.id.rl_setting_about_us);
+        rl_setting_contact_service = findViewById(R.id.rl_setting_contact_service);
+        rl_setting_clear_cache = findViewById(R.id.rl_setting_clear_cache);
+        rl_setting_service_leader = findViewById(R.id.rl_setting_service_leader);
     }
 
     void initEvent() {
-        ll_change_mobile.setOnClickListener(this);
-        ll_change_password.setOnClickListener(this);
-        viewContactService.setOnClickListener(this);
+        setting_back.setOnClickListener(this);
+        rl_setting_change_mobile.setOnClickListener(this);
+        rl_setting_change_password.setOnClickListener(this);
+        rl_setting_about_us.setOnClickListener(this);
+        rl_setting_contact_service.setOnClickListener(this);
+        rl_setting_clear_cache.setOnClickListener(this);
+        rl_setting_service_leader.setOnClickListener(this);
     }
 
     @Override
@@ -51,21 +66,39 @@ public class SettingActivity extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.id_ll_setting_change_mobile) {
+        if (v.getId() == R.id.id_setting_back) {
+            finish();
+        } else if (v.getId() == R.id.rl_setting_change_mobile) {
             Intent changeMobile = new Intent(SettingActivity.this, ChangeMobieActivity.class);
             startActivity(changeMobile);
-        } else if (v.getId() == R.id.id_ll_setting_change_password) {
+        } else if (v.getId() == R.id.rl_setting_change_password) {
             Intent changePassword = new Intent(SettingActivity.this, ForgetPasswordActivity.class);
             startActivity(changePassword);
-        } else if (v.getId() == R.id.id_setting_contact_service) {
+        } else if (v.getId() == R.id.rl_setting_contact_service) {
             final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
             alertDialog.show();
-            alertDialog.setContentView(R.layout.dialog_call);
+            alertDialog.setContentView(R.layout.dialog_call_service);
             Window window = alertDialog.getWindow();
             window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
             window.setBackgroundDrawableResource(android.R.color.white);
             window.setGravity(Gravity.BOTTOM);
             window.setWindowAnimations(R.style.AlertDialog_AppCompat);
+
+            TextView dialog_call_service_cancel = alertDialog.findViewById(R.id.dialog_call_service_cancel);
+            TextView dialog_call_service_ok = alertDialog.findViewById(R.id.dialog_call_service_ok);
+            dialog_call_service_cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alertDialog.dismiss();
+                }
+            });
+            dialog_call_service_ok.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alertDialog.dismiss();
+                    Toast.makeText(getApplicationContext(), "正在呼叫客服", Toast.LENGTH_LONG).show();
+                }
+            });
         }
     }
 }

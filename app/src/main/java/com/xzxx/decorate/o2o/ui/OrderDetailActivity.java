@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
     private TabLayout mTabLayout = null;
     private ViewPager mViewPager;
     private OrderDetailActivity.PageAdatper pageAdatper;
+    private ImageView order_back_button;
     private TextView order_menu;
     private int[] mTabTitles = new int[]{R.string.order_content, R.string.order_progress};
 
@@ -41,12 +43,14 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.layout_order_detail);
         mTabLayout = findViewById(R.id.order_detail_tab_layout);
         mViewPager = findViewById(R.id.order_detail_tab_viewpager);
+        order_back_button = findViewById(R.id.order_back_button);
         order_menu = findViewById(R.id.order_menu);
         pageAdatper = new OrderDetailActivity.PageAdatper(getSupportFragmentManager());
         mViewPager.setOffscreenPageLimit(3);
         mViewPager.setAdapter(pageAdatper);
         mTabLayout.setupWithViewPager(mViewPager);
 
+        order_back_button.setOnClickListener(this);
         order_menu.setOnClickListener(this);
     }
 
@@ -71,6 +75,9 @@ public class OrderDetailActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.order_back_button:
+                finish();
+                break;
             case R.id.order_menu:
                 View contentView = LayoutInflater.from(getApplicationContext()).inflate(R.layout
                         .layout_order_popwindow, null, false);

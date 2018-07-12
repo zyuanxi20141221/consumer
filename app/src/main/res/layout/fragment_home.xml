@@ -161,6 +161,7 @@
         android:background="@color/gray"/>
 
     <LinearLayout
+        android:id="@+id/ll_door_to_door_install"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginTop="10dp"
@@ -301,6 +302,7 @@
         android:background="@color/gray"/>
 
     <LinearLayout
+        android:id="@+id/ll_home_maintenance"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginTop="10dp"

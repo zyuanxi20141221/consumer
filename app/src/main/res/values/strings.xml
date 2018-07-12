@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">consumer</string>
+    <string name="app_name">小装小修(个人端)</string>
     <string name="home">首页</string>
     <string name="service_category">服务分类</string>
     <string name="classify">分类</string>

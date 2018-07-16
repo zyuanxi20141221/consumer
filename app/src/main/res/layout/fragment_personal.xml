@@ -171,7 +171,8 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="20dp"
-        android:background="@color/gray"></View>
+        android:background="@color/gray">
+    </View>
 
     <RelativeLayout
         android:id="@+id/ll_personal_address"
@@ -202,7 +203,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/gray"></View>
+        android:background="@color/gray">
+    </View>
 
     <RelativeLayout
         android:id="@+id/ll_personal_setting"
@@ -233,7 +235,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/gray"></View>
+        android:background="@color/gray">
+    </View>
 
     <RelativeLayout
         android:id="@+id/ll_personal_coupon"

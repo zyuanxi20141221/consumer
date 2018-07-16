@@ -4,8 +4,8 @@
     <string name="service_category">服务分类</string>
     <string name="classify">分类</string>
     <string name="order">订单</string>
-    <string name="profile">我的</string>
-    <string name="owner_order">我的订单</string>
+    <string name="profile">我的</string> <string name="owner_order">我的订单</string>
+
     <string name="red_package">新人红包</string>
     <string name="city_shenzhen">深圳</string>
     <string name="present_card">礼品卡</string>
